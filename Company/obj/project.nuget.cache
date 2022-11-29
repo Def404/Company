@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TuroA5RtMAVsP0xSly0LCpmJWf/muxVdpbGAHlhCFaolmeONFo2PpovvOV07JuE/TIAe68V9aSjcmrgPzDQeyQ==",
+  "dgSpecHash": "ST4WJH2/7jkSYDhY+tXthmxmQTnbpQQCzf3t6m18DkTRzH/XfIbvkrDzmuZVopIA96glbjgdHykTUYxv3HVl2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\basc1\\source\\repos\\Def404\\Company\\Company\\Company\\Company.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\basc1\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\basc1\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\basc1\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

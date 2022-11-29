@@ -4,8 +4,6 @@ C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-wind
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\Company.dll
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\ref\Company.dll
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\Company.pdb
-C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\MaterialDesignColors.dll
-C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\Company.csproj.AssemblyReference.cache
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\AuthorizationWindow.g.cs
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\MainWindow.g.cs
@@ -24,3 +22,8 @@ C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-wind
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\ref\Company.dll
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\Company.pdb
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\Company.genruntimeconfig.cache
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\Company.dll.config
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\bin\Debug\net6.0-windows\Npgsql.dll
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\RegistrationWindow.g.cs
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\RegistrationWindow.baml
