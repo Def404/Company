@@ -1,0 +1,68 @@
+﻿<Window x:Class="Company.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:namespace="clr-namespace:Company"
+        mc:Ignorable="d"
+        Title="AuthorizationWindow" Height="450" Width="350">
+    <Grid>
+        <StackPanel
+            Orientation="Vertical"
+            VerticalAlignment="Center"
+            Margin="25">
+            <TextBlock
+                Text="Авторизация"
+                FontSize="40"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="0, 60"
+                FontWeight="Bold" />
+
+            <TextBlock
+                Text="Логин"
+                FontSize="16"
+                FontWeight="DemiBold"
+                Margin="0,5" />
+            <TextBox
+                x:Name="LoginTxtBox"
+                FontSize="16"
+                FontWeight="DemiBold"
+                Margin="0,5" />
+            <TextBlock
+                Text="Пароль"
+                FontSize="16"
+                FontWeight="DemiBold"
+                Margin="0,5" />
+            <PasswordBox
+                x:Name="PasswordBox"
+                FontSize="16"
+                FontWeight="DemiBold"
+                Margin="0,5">
+            </PasswordBox>
+
+            <StackPanel
+                Margin="0, 15,  0 , 0"
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Button
+                    x:Name="AuthBtn"
+                    Content="ВОЙТИ"
+                    Margin="10"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    HorizontalAlignment="Center" 
+                    Click="AuthBtn_OnClick"/>
+                <Button
+                    x:Name="RegBtn"
+                    Content="Регистрация"
+                    Margin="10"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    HorizontalAlignment="Center" 
+                    Click="RegBtn_OnClick"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
