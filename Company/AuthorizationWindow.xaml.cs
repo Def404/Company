@@ -21,23 +21,19 @@ public partial class AuthorizationWindow : Window{
             return;
         }
 
-        if (login.Length < 3){
-            var errorStr = "Логин должен быть от 5 символов";
+        if (!Regex.IsMatch(login, @"[a-zA-Z0-9-_\.]{4,20}$")){
+            var errorStr = "Проверьте написание логина\n" +
+                           "В логине могут быть буквы, цифры и символы(-, _), первый символ обязательно буква, от 5 до 20 символов";
             MessageBox.Show(errorStr);
 
             return;
         }
 
-        if (password.Length < 3){
-            var errorStr = "Пароль должен быть от 5 символов";
-            MessageBox.Show(errorStr);
+        if (!Regex.IsMatch(password, @"(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$")){
+            var errorStr = "Проверьте написание папроля \n" +
+                           "В пароле могуть быть строчные и прописные латинские буквы, цифры, спецсимволы. Минимум 8 символов\n" +
+                           "Обязатльно хотя бы одна строчная и прописаня буква и одна цифра";
 
-            return;
-        }
-
-        if (Regex.IsMatch(login, "[а-яА-Я]") ||
-            Regex.IsMatch(password, "[а-яА-Я]")){
-            var errorStr = "Проверьте написание логина или папроля";
             MessageBox.Show(errorStr);
 
             return;
@@ -52,17 +48,16 @@ public partial class AuthorizationWindow : Window{
             return;
         }
 
-        employee.Password = password;
+        //employee.Password = password;
 
         try{
-            var confFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            var consSet = confFile.ConnectionStrings.ConnectionStrings;
-            var connectionsString = consSet["UserConnection"].ConnectionString;
-            var newCntStr = connectionsString.Replace("usr", employee.EmployeeLogin).Replace("pswd", employee.Password);
-
-            consSet["UserConnection"].ConnectionString = newCntStr;
-            confFile.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.RefreshSection(confFile.ConnectionStrings.SectionInformation.Name);
+            EmployeeSqlConnector sqlConnector = new EmployeeSqlConnector();
+            var res = sqlConnector.UpdateConnectionString(
+                $"Server=localhost;Port=5432;User ID={login};Password={password};Database=company;");
+            
+            if (res == false){
+                return;
+            }
 			
             var mainWindow = new MainWindow(employee);
             mainWindow.Show();
