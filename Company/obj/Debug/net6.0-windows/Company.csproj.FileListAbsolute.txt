@@ -33,3 +33,5 @@ C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-wind
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\Pages\TaskPage.baml
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\ModalWindows\TaskWindow.g.cs
 C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\ModalWindows\TaskWindow.baml
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\ModalWindows\AddTaskWindow.g.cs
+C:\Users\basc1\source\repos\Def404\Company\Company\Company\obj\Debug\net6.0-windows\ModalWindows\AddTaskWindow.baml

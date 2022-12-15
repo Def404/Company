@@ -19,7 +19,7 @@ public class AuthAndRegDbModule{
         commandCount.Parameters.AddWithValue("l", NpgsqlDbType.Varchar, login);
         commandCount.Parameters.AddWithValue("pas", NpgsqlDbType.Text, password);
 
-        const string sqlCommandGetUser = "SELECT employee_login, full_name, email, phone_number, position_name FROM employee e JOIN employees_position ep on ep.position_id = e.position_id WHERE employee_login=@l AND password=crypt(@pas, password)";
+        const string sqlCommandGetUser = "SELECT employee_id, employee_login, full_name, email, phone_number, position_name FROM employee e JOIN employees_position ep on ep.position_id = e.position_id WHERE employee_login=@l AND password=crypt(@pas, password)";
         NpgsqlCommand commandGetUser = new NpgsqlCommand(sqlCommandGetUser, connector.GetConnection());
         commandGetUser.Parameters.AddWithValue("l", NpgsqlDbType.Varchar, login);
         commandGetUser.Parameters.AddWithValue("pas", NpgsqlDbType.Text, password);
@@ -46,6 +46,7 @@ public class AuthAndRegDbModule{
 
             while (readers.Read()){
                 employee = new Employee(
+                    Int32.Parse(readers["employee_id"].ToString()), 
                     readers["employee_login"].ToString(),
                     readers["full_name"].ToString(),
                     readers["email"].ToString(),

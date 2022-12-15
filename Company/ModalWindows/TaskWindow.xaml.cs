@@ -25,6 +25,8 @@ public partial class TaskWindow : Window{
         ReceiptTxtBlock.Text = _task.Receipt;
         StatusTxtBlock.Text = _task.Status;
         ExecutorNameTxtBlock.Text = _task.ExecutorName;
+        ContractIdTxtBlock.Text = _task.ContractId;
+        SerialNumberNameTxtBlock.Text = _task.SerialNumber;
 
         if (_task.Status.Equals("выполнено")){
             CompleteTaskBtn.IsEnabled = false;

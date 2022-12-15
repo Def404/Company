@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Company.ModalWindows"
         mc:Ignorable="d"
-        Title="TaskWindow" Height="500" Width="600"
+        Title="TaskWindow" Height="600" Width="600"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Loaded="TaskWindow_OnLoaded">
@@ -83,6 +83,16 @@
                     FontSize="16"
                     FontWeight="DemiBold"
                     Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Приоритет:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="PriorityTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
             </StackPanel>
             
             <StackPanel
@@ -111,6 +121,26 @@
                     TextWrapping="Wrap"/>
                 
                 <TextBlock
+                    Text="Номер контракта:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="ContractIdTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Серийный номер:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="SerialNumberNameTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
                     Text="Тип получения:"
                     FontSize="16"
                     FontWeight="DemiBold"
@@ -121,15 +151,7 @@
                     FontWeight="DemiBold"
                     Margin="0,0,0,10"/>
                 
-                <TextBlock
-                    Text="Приоритет:"
-                    FontSize="16"
-                    FontWeight="DemiBold"/>
-                <TextBlock
-                    x:Name="PriorityTxtBlock"
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Margin="0,0,0,10"/>
+                
                 
                 <TextBlock
                     Text="Исполнитель:"

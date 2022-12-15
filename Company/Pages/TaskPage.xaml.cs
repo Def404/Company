@@ -29,6 +29,9 @@ public partial class TaskPage : UserControl{
     }
 
     private void AddTaskBtn_OnClick(object sender, RoutedEventArgs e){
-        
+        AddTaskWindow addTaskWindow = new AddTaskWindow();
+        if (addTaskWindow.ShowDialog() == true){
+            TasksDataGrid.ItemsSource = _taskDbModule.GetTasks();
+        }
     }
 }

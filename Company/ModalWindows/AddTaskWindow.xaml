@@ -34,23 +34,49 @@
                 Margin="25">
                 
                 <TextBlock
-                    Text="Срок выполения:"
+                    Text="Период выполения:"
                     FontSize="16"
                     FontWeight="DemiBold"/>
-                <TextBlock
+                <TextBox
                     x:Name="ExecuteDateTxtBlock"
                     FontSize="16"
                     FontWeight="DemiBold"
                     Margin="0,0,0,10"/>
                 
                 <TextBlock
-                    Text="Статутс"
+                    Text="Статутс*"
                     FontSize="16"
                     FontWeight="DemiBold"/>
                 <ComboBox
                     x:Name="StatusComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
+                    SelectedValuePath="StatusName"
+                    DisplayMemberPath="StatusName"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Номер контракта:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <ComboBox
+                    x:Name="ContractIdComboBox"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    SelectedValuePath="Id"
+                    DisplayMemberPath="Id"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Серийный номер:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <ComboBox
+                    x:Name="SerialNumberComboBox"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    SelectedValuePath="SerialNumber"
+                    DisplayMemberPath="SerialNumber"
                     Margin="0,0,0,10"/>
             </StackPanel>
             
@@ -59,27 +85,32 @@
                 Orientation="Vertical"
                 Margin="25">
                 <TextBlock
-                    Text="Организация:"
+                    Text="Организация:*"
                     FontSize="16"
                     FontWeight="DemiBold"/>
                 <ComboBox
                     x:Name="OrganizationComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
-                    Margin="0,0,0,10"/>
+                    SelectedValuePath="Name"
+                    DisplayMemberPath="Name"
+                    Margin="0,0,0,10"
+                    SelectionChanged="OrganizationComboBox_OnSelectionChanged"/>
                 
                 <TextBlock
-                    Text="Контакное лицо:"
+                    Text="Контакное лицо:*"
                     FontSize="16"
                     FontWeight="DemiBold"/>
                 <ComboBox
                     x:Name="ContactParsonNameComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
+                    SelectedValuePath="FullName"
+                    DisplayMemberPath="FullName"
                     Margin="0,0,0,10"/>
                 
                 <TextBlock
-                    Text="Тип получения:"
+                    Text="Тип получения:*"
                     FontSize="16"
                     FontWeight="DemiBold"
                     TextWrapping="Wrap"/>
@@ -87,16 +118,20 @@
                     x:Name="ReceiptComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
+                    SelectedValuePath="Name"
+                    DisplayMemberPath="Name"
                     Margin="0,0,0,10"/>
                 
                 <TextBlock
-                    Text="Приоритет:"
+                    Text="Приоритет:*"
                     FontSize="16"
                     FontWeight="DemiBold"/>
                 <ComboBox
                     x:Name="PriorityComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
+                    SelectedValuePath="Name"
+                    DisplayMemberPath="Name"
                     Margin="0,0,0,10"/>
                 
                 <TextBlock
@@ -107,32 +142,24 @@
                     x:Name="ExecutorNameComboBox"
                     FontSize="16"
                     FontWeight="DemiBold"
+                    SelectedValuePath="FullName"
+                    DisplayMemberPath="FullName"
                     Margin="0,0,0,10"/>
             </StackPanel>
             
-            <StackPanel
-                Grid.ColumnSpan="2" 
-                Grid.Column="0"
-                Orientation="Horizontal">
+           
                 <Button
-                    x:Name="CompleteTaskBtn"
+                    x:Name="AddTaskBtn"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Center"
                     FontSize="16"
-                    Content="txt"
+                    Content="Добавить"
                     Width="200"
                     Margin="25"
-                    />
-                
-                <Button
-                    x:Name="CloseBtn"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
-                    FontSize="16"
-                    Content="закрыть"
-                    Width="200"
-                    Margin="25"/>
-            </StackPanel>
+                    Grid.ColumnSpan="2" 
+                    Grid.Column="0"
+                    Click="AddTaskBtn_OnClick"/>
+           
           
         </Grid>
     </Grid>

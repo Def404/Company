@@ -9,13 +9,15 @@ public class Task{
     public DateTime? CompletionDate{ get; }
     public string ContactParsonName{ get; }
     public string OrganizationName{ get; }
+    public string ContractId{ get; }
+    public string SerialNumber{ get; }
     public string Priority{ get; }
     public string Receipt{ get; }
     public string Status{ get; }
     public string? ExecutorName{ get; }
 
     public Task(int taskId, DateTime createDate, DateTime? executeDate, DateTime? completionDate,
-        string contactParsonName, string organizationName, string priority,
+        string contactParsonName, string organizationName, string contractId, string serialNumber, string priority,
         string receipt, string status, string? executorName){
         
         TaskId = taskId;
@@ -24,6 +26,8 @@ public class Task{
         CompletionDate = completionDate;
         ContactParsonName = contactParsonName;
         OrganizationName = organizationName;
+        ContractId = contractId;
+        SerialNumber = serialNumber;
         Priority = priority;
         Receipt = receipt;
         Status = status;
