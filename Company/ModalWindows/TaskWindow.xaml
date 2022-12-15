@@ -1,0 +1,173 @@
+﻿<Window x:Class="Company.ModalWindows.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Company.ModalWindows"
+        mc:Ignorable="d"
+        Title="TaskWindow" Height="500" Width="600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Loaded="TaskWindow_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock
+            Grid.Row="0"
+            Text="Информация о задании"
+            FontSize="32"
+            FontWeight="DemiBold"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="25, 0"/>
+        
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="0"
+                Orientation="Vertical"
+                Margin="25">
+                <TextBlock
+                    Text="Номер задания:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="TaskIdTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Дата создания:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="CreateDateTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Срок выполения:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="ExecuteDateTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Дата выполнения:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="CompletionDateTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Статутс"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="StatusTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+            </StackPanel>
+            
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Vertical"
+                Margin="25">
+                <TextBlock
+                    Text="Организация:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="OrganizationNameTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Контакное лицо:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="ContactParsonNameTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"
+                    TextWrapping="Wrap"/>
+                
+                <TextBlock
+                    Text="Тип получения:"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    TextWrapping="Wrap"/>
+                <TextBlock
+                    x:Name="ReceiptTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Приоритет:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="PriorityTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"/>
+                
+                <TextBlock
+                    Text="Исполнитель:"
+                    FontSize="16"
+                    FontWeight="DemiBold"/>
+                <TextBlock
+                    x:Name="ExecutorNameTxtBlock"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="0,0,0,10"
+                    TextWrapping="Wrap"/>
+            </StackPanel>
+            
+            <StackPanel
+                Grid.ColumnSpan="2" 
+                Grid.Column="0"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="CompleteTaskBtn"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    FontSize="16"
+                    Content="txt"
+                    Width="200"
+                    Margin="25"
+                    Click="CompleteTaskBtn_OnClick"/>
+                
+                <Button
+                    x:Name="CloseBtn"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    FontSize="16"
+                    Content="закрыть"
+                    Width="200"
+                    Margin="25"
+                    Click="CloseBtn_OnClick"/>
+            </StackPanel>
+          
+        </Grid>
+    </Grid>
+</Window>

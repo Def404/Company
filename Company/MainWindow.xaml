@@ -32,11 +32,14 @@
                 FontWeight="DemiBold"
                 BorderBrush="Transparent"/>
             <Button
+                x:Name="TaskPageBtn"
+                Content="Задания"
                 Background="Transparent"
                 Margin="25,0"
                 FontSize="16"
                 FontWeight="DemiBold"
-                BorderBrush="Transparent"/>
+                BorderBrush="Transparent"
+                Click="TaskPageBtn_OnClick"/>
             <Button
                 x:Name="ProfilePageBtn"
                 Content="Профиль"

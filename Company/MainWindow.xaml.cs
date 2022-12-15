@@ -11,6 +11,7 @@ namespace Company{
     public partial class MainWindow : Window{
 
         private readonly ProfilePage _profilePage = new ProfilePage();
+        private readonly TaskPage _taskPage = new TaskPage();
         public static Employee _employee;
         public MainWindow(Employee employee){
             InitializeComponent();
@@ -20,6 +21,11 @@ namespace Company{
         private void ProfilePageBtn_OnClick(object sender, RoutedEventArgs e){
             RenderPage.Children.Clear();
             RenderPage.Children.Add(_profilePage);
+        }
+
+        private void TaskPageBtn_OnClick(object sender, RoutedEventArgs e){
+            RenderPage.Children.Clear();
+            RenderPage.Children.Add(_taskPage);
         }
     }
 }
