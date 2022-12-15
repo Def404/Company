@@ -159,8 +159,6 @@
                     Grid.ColumnSpan="2" 
                     Grid.Column="0"
                     Click="AddTaskBtn_OnClick"/>
-           
-          
         </Grid>
     </Grid>
 </Window>

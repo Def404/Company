@@ -16,6 +16,7 @@ public partial class TaskPage : UserControl{
     private void TaskPage_OnLoaded(object sender, RoutedEventArgs e){
         if (MainWindow._employee.PositionName.Equals("worker")){
             AddTaskBtn.Visibility = Visibility.Hidden;
+            AddContractBtn.Visibility = Visibility.Hidden;
         }
         TasksDataGrid.ItemsSource = _taskDbModule.GetTasks();
     }
@@ -34,6 +35,13 @@ public partial class TaskPage : UserControl{
     private void AddTaskBtn_OnClick(object sender, RoutedEventArgs e){
         AddTaskWindow addTaskWindow = new AddTaskWindow();
         if (addTaskWindow.ShowDialog() == true){
+            TasksDataGrid.ItemsSource = _taskDbModule.GetTasks();
+        }
+    }
+
+    private void AddContractBtn_OnClick(object sender, RoutedEventArgs e){
+        AddContractWindow addContractWindow = new AddContractWindow();
+        if (addContractWindow.ShowDialog() == true){
             TasksDataGrid.ItemsSource = _taskDbModule.GetTasks();
         }
     }

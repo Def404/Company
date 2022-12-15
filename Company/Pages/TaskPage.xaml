@@ -10,13 +10,23 @@
     <Grid>
         <StackPanel
             Orientation="Vertical">
-            <Button 
-                x:Name="AddTaskBtn"
-                FontSize="16"
+            <StackPanel
+                Orientation="Horizontal"
                 HorizontalAlignment="Right"
-                Content="добавить  заданине"
-                Margin="25,10,25,0"
-                Click="AddTaskBtn_OnClick"/>
+                Margin="25,10,25,0">
+                <Button 
+                    x:Name="AddTaskBtn"
+                    FontSize="16"
+                    Content="добавить заданине"
+                    Margin="15,0"
+                    Click="AddTaskBtn_OnClick"/>
+                <Button 
+                    x:Name="AddContractBtn"
+                    FontSize="16"
+                    Content="добавить контракт"
+                    Click="AddContractBtn_OnClick"/>
+            </StackPanel>
+           
             <Border
                 Margin="25"
                 Background="White"

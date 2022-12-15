@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using Company.Database.Models;
 using Npgsql;
+using NpgsqlTypes;
 
 namespace Company.Database.Modules;
 
@@ -31,5 +32,25 @@ public class ContractDbModule{
         }
 
         return contracts;
+    }
+
+    public void SetContract(string? info, int typeId, int personId){
+        
+        EmployeeSqlConnector sqlConnector = new EmployeeSqlConnector();
+        
+        const string sqlCommand = "INSERT INTO contract(info, type_id, person_id) VALUES (@info,  @tId, @pid);";
+        NpgsqlCommand command = new NpgsqlCommand(sqlCommand, sqlConnector.GetConnection());
+        command.Parameters.AddWithValue("info", NpgsqlDbType.Text, (object)info ?? DBNull.Value);
+        command.Parameters.AddWithValue("tId", NpgsqlDbType.Integer, typeId);
+        command.Parameters.AddWithValue("pid", NpgsqlDbType.Integer, personId);
+        
+        try{
+            sqlConnector.OpenConnection();
+            command.ExecuteNonQuery();
+            sqlConnector.CloseConnection();
+        }
+        catch (Exception e){
+            MessageBox.Show(e.Message);
+        }
     }
 }
