@@ -14,6 +14,9 @@ public partial class TaskPage : UserControl{
     }
 
     private void TaskPage_OnLoaded(object sender, RoutedEventArgs e){
+        if (MainWindow._employee.PositionName.Equals("worker")){
+            AddTaskBtn.Visibility = Visibility.Hidden;
+        }
         TasksDataGrid.ItemsSource = _taskDbModule.GetTasks();
     }
 
