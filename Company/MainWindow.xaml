@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="800"
         WindowStartupLocation="CenterScreen">
-    <Grid ShowGridLines="True" Background="WhiteSmoke">
+    <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
@@ -19,18 +19,14 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center">
             <Button
-                Content=""
+                x:Name="StatisticPageBtn"
+                Content="Статистика"
                 Background="Transparent"
                 Margin="25,0"
                 FontSize="16"
                 FontWeight="DemiBold"
-                BorderBrush="Transparent"/>
-            <Button
-                Background="Transparent"
-                Margin="25,0"
-                FontSize="16"
-                FontWeight="DemiBold"
-                BorderBrush="Transparent"/>
+                BorderBrush="Transparent"
+                Click="StatisticPageBtn_OnClick"/>
             <Button
                 x:Name="TaskPageBtn"
                 Content="Задания"

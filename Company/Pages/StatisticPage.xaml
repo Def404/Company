@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="Company.Pages.StatisticPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Company.Pages"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="800"
+             Loaded="StatisticPage_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Text="Статистика"
+            FontSize="32"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="25, 10" />
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="25"
+            Orientation="Vertical">
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="общее количество заданий: "
+                    FontSize="16"
+                    FontWeight="DemiBold" />
+                <TextBlock
+                    x:Name="AllTasksCntTxtBlock"
+                    Text="5"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="количество заданий завершено вовремя: "
+                    FontSize="16"
+                    FontWeight="DemiBold" />
+                <TextBlock
+                    x:Name="TasksCmpltOnTimeCntTxtBlock"
+                    Text="5"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="количество заданий завершено с нарушением срока исполнения: "
+                    FontSize="16"
+                    FontWeight="DemiBold" />
+                <TextBlock
+                    x:Name="TasksCmpltOutTimeCntTxtBlock"
+                    Text="5"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="количество заданий с истекшим сроком исполнения не завершено: "
+                    FontSize="16"
+                    FontWeight="DemiBold" />
+                <TextBlock
+                    x:Name="TasksNotCmpltOutTimeCntTxtBlock"
+                    Text="5"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="5,0" />
+            </StackPanel>
+            
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="количество завершенных заданий, срок исполнения которых не истек: "
+                    FontSize="16"
+                    FontWeight="DemiBold" />
+                <TextBlock
+                    x:Name="TasksNotCmpltOnTimeCntTxtBlock"
+                    Text="5"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Margin="5,0" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
