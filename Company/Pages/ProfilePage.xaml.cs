@@ -12,7 +12,7 @@ public partial class ProfilePage : UserControl{
         LoginTxtBlock.Text = MainWindow._employee.EmployeeLogin;
         FullNameTxtBlock.Text = MainWindow._employee.FullName;
         PositionTxtBlock.Text = MainWindow._employee.PositionName;
-        EmailTxtBlock.Text = MainWindow._employee.EmployeeLogin;
+        EmailTxtBlock.Text = MainWindow._employee.Email;
         PhoneNumberTxtBlock.Text = MainWindow._employee.PhoneNumber;
     }
 }
