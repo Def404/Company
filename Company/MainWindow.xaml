@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Company"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid ShowGridLines="True" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button
+                Content=""
+                Background="Transparent"
+                Margin="25,0"
+                FontSize="16"
+                FontWeight="DemiBold"
+                BorderBrush="Transparent"/>
+            <Button
+                Background="Transparent"
+                Margin="25,0"
+                FontSize="16"
+                FontWeight="DemiBold"
+                BorderBrush="Transparent"/>
+            <Button
+                Background="Transparent"
+                Margin="25,0"
+                FontSize="16"
+                FontWeight="DemiBold"
+                BorderBrush="Transparent"/>
+            <Button
+                x:Name="ProfilePageBtn"
+                Content="Профиль"
+                Background="Transparent"
+                Margin="25,0"
+                FontSize="16"
+                FontWeight="DemiBold"
+                BorderBrush="Transparent"
+                Click="ProfilePageBtn_OnClick"/>
+        </StackPanel>
+        <Grid
+            x:Name="RenderPage"
+            Grid.Row="1">
+            
+        </Grid>
     </Grid>
 </Window>

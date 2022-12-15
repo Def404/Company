@@ -1,19 +1,18 @@
-﻿namespace Company;
+﻿namespace Company.Database.Models;
 
 public class Employee{
     public string EmployeeLogin{ get; }
-    public string Password{ get; set; }
+    
     public string FullName{ get; }
     public string Email{ get; }
     public string PhoneNumber{ get; }
-    public int PositionId{ get; }
+    public string PositionName{ get; }
 
-    public Employee(string employeeLogin, string password, string fullName, string email, string phoneNumber, int positionId){
+    public Employee(string employeeLogin, string fullName, string email, string phoneNumber, string positionName){
         EmployeeLogin = employeeLogin;
-        Password = password;
         FullName = fullName;
         Email = email;
         PhoneNumber = phoneNumber;
-        PositionId = positionId;
+        PositionName = positionName;
     }
 }

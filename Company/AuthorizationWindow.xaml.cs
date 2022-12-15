@@ -1,6 +1,9 @@
 ﻿using System.Configuration;
 using System.Text.RegularExpressions;
 using System.Windows;
+using Company.Database;
+using Company.Database.Models;
+using Company.Database.Modules;
 
 namespace Company;
 

@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:namespace="clr-namespace:Company"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AuthorizationWindow" Height="500" Width="350">
     <Grid>
         <StackPanel

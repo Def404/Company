@@ -2,7 +2,7 @@
 using System.Windows;
 using Npgsql;
 
-namespace Company;
+namespace Company.Database;
 
 public class EmployeeSqlConnector{
     private static string _connectionStr = ConfigurationManager.ConnectionStrings["UserConnection"].ConnectionString;
