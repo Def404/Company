@@ -16,7 +16,7 @@
 
         <TextBlock
             Grid.Row="0"
-            Text="Добавить задание"
+            Text="Добавить контракт"
             FontSize="32"
             FontWeight="DemiBold"
             VerticalAlignment="Center"
