@@ -64,4 +64,33 @@ public class AuthAndRegDbModule{
             return employee = null;
         }
     }
+    
+    public string SetEmployee(string login, string firstName, string secondName, string lastName, string password, string email,
+        string phone, int positionId){
+
+        AuthConnector connector = new AuthConnector();
+
+        const string sqlCommand = "CALL create_employee(@fullName, @email, @phone, @positionId, @login, @password);";
+        NpgsqlCommand command = new NpgsqlCommand(sqlCommand, connector.GetConnection());
+        command.Parameters.AddWithValue("fullName", NpgsqlDbType.Text, $"{lastName} {firstName} {secondName}");
+        command.Parameters.AddWithValue("email", NpgsqlDbType.Varchar, email);
+        command.Parameters.AddWithValue("phone", NpgsqlDbType.Varchar, phone);
+        command.Parameters.AddWithValue("positionId", NpgsqlDbType.Integer, positionId);
+        command.Parameters.AddWithValue("login", NpgsqlDbType.Text, login);
+        command.Parameters.AddWithValue("password", NpgsqlDbType.Text, password);
+       
+
+        string result = null;
+
+        try{
+            connector.OpenConnection();
+            command.ExecuteNonQuery();
+            connector.CloseConnection();
+        }
+        catch (NpgsqlException e){
+            result = e.Message;
+        }
+
+        return result;
+    }
 }

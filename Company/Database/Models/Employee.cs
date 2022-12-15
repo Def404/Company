@@ -22,4 +22,12 @@ public class Employee{
         EmployeeId = employeeId;
         FullName = fullName;
     }
+
+    public Employee(string employeeLogin, string fullName, string email, string phoneNumber, string positionName){
+        EmployeeLogin = employeeLogin;
+        FullName = fullName;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        PositionName = positionName;
+    }
 }
